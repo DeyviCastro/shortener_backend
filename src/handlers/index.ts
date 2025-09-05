@@ -14,7 +14,7 @@ export const createUser = async (req: Request, res: Response) => {
         const userExist = await User.findOne({ email })
 
         if (userExist) {
-            const error = new Error("El usuario ya existe")
+            const error = new Error("Este correo ya esta en uso")
             return res.status(403).json({ error: error.message })
         }
 

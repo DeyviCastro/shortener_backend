@@ -23,11 +23,16 @@ router.post('/auth/login',
     login )
 
 
-router.post('/home', autenticarse,home)
-router.get('/getLinks', autenticarse, getLinks)
+//!Links
 
-router.get('/:slug', redirigir)
+// router.post('/home', autenticarse,home)
+router.post('/links', autenticarse,home)
+// router.get('/getLinks', autenticarse, getLinks)
+router.get('/links', autenticarse, getLinks)
+
 router.delete('/links/:id', autenticarse, deleteLink)
+
+// router.get('/:slug', redirigir)
 
 
 export default router;
